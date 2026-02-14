@@ -14,3 +14,14 @@ def handle_message(message):
         bot.reply_to(message, "Beni mi çağırdın kral sorun nedir")
 
 bot.infinity_polling()
+import random
+
+@bot.message_handler(func=lambda message: bot.get_me().username.lower() in message.text.lower())
+def mention_handler(message):
+    cevaplar = [
+        "Beni mi çağırdın lan ",
+        "Buradayım kral ",
+        "dinliyorum",
+        "Ne var la "
+    ]
+    bot.reply_to(message, random.choice(cevaplar))
