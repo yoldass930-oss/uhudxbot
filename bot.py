@@ -6,7 +6,7 @@ bot = telebot.TeleBot(TOKEN)
 
 @bot.message_handler(commands=['start'])
 def start(message):
-    bot.reply_to(message, "Selam aleyküm güvemlik ve asayişten ben sorumluyum😏")
+    bot.reply_to(message, "Selam aleyküm güvenlik ve asayişten ben sorumluyum(mıdıtenyosayk😏")
 
 @bot.message_handler(func=lambda message: True)
 def handle_message(message):
@@ -14,3 +14,5 @@ def handle_message(message):
         bot.reply_to(message, "Beni mi çağırdın kral sorun nedir"
                     "seni dinliyorum"
                      "ne var la"
+
+bot.infinity_polling()
